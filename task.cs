@@ -18,7 +18,21 @@ void PrintArray(string[] array) {
    Console.Write("] -> ");
 }
 
+void FindStringsWithThreeChars(string[] array) {
+   string[] result = new string[len];
+   Console.Write("[ ");
+   for (int i = 0; i < array.Length; i++)
+   {
+      if (array[i].Length <= 3) {
+         result[i] = array[i];
+         Console.Write($"'{result[i]}' ");
+      }
+   }
+   Console.Write("]");
+}
+
 string[] array = new string[len];
 FillArray(array);
 Console.WriteLine();
 PrintArray(array);
+FindStringsWithThreeChars(array);
